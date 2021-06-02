@@ -1,13 +1,15 @@
-import { atom } from "recoil";
-
-const inventory = {
-  a: { name: "🧉 Yerba Mate", price: 10 },
-  b: { name: "☕️ Coffee", price: 15 },
-  c: { name: "🍵 Tea", price: 7.5 },
-};
+import { RecoilRoot } from "recoil";
+import { AvailableItems, Cart } from "./components";
+import { inventory, destinations } from "./constants";
+import "./App.css";
 
 function App() {
-  return <div className="App">SET UP</div>;
+  return (
+    <RecoilRoot>
+      <AvailableItems />
+      <Cart />
+    </RecoilRoot>
+  );
 }
 
 export default App;
